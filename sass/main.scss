@@ -1,0 +1,140 @@
+$font-size-default: 20px;
+$font-searchbox: 1.2rem;
+
+$width-container: 100%;
+$height-container: 100vh;
+$width-container-navigation: 45%;
+$width-container-content: 55%;
+
+$color-container: rgb(197, 197, 197);
+$color-container-navigation-font: rgb(70, 70, 70);
+$color-container-navigation-font-hover: white;
+$color-container-navigation-hover: rgb(9, 185, 126);
+$color-highlight: rgb(10, 228, 94);
+
+$color-button: rgb(6, 177, 105);
+
+$padding-level: 15px;
+
+@mixin bottom-container {
+  height: 5%;
+  float: left;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: $font-size-default;
+}
+
+.container {
+  width: $width-container;
+  height: $height-container;
+  background-color: $color-container;
+}
+
+.container__navigation {
+  width: $width-container-navigation;
+  height: 95%;
+  float: left;
+  overflow: auto;
+}
+
+.container__navigation li{
+  color: $color-container-navigation-font;
+  cursor: pointer;
+}
+
+.container__content {
+  width: $width-container-content;
+  height: 95%;
+  float: left;
+  overflow: auto;
+  background-color: white;
+}
+
+.container__searchbox {
+  width: $width-container-navigation;
+  @include bottom-container;
+}
+
+.container__searchbox input {
+  margin: 0 auto;
+  padding: 20px;
+  width: 97%;
+  height: 95%;
+  font-size: $font-searchbox;
+  border-radius: 15px;
+}
+
+.container__editbox {
+  width: $width-container-content;
+  @include bottom-container;
+}
+
+.container__editbox input{
+  float: left;
+  padding: 20px;
+  width: 50%;
+  height: 95%;
+  font-size: $font-searchbox;
+  border-radius: 15px;
+}
+
+.container__editbox button{
+  float: right;
+  width: 30%;
+  height: 95%;
+  font-size: $font-searchbox;
+  border-radius: 5px;
+  border: 1px;
+  background-color: $color-button;
+  color: white;
+}
+
+.level-0 {
+  padding-left: $padding-level;
+}
+
+.level-1 {
+  padding-left: $padding-level * 2;
+  background-color: lighten($color-container, 10%);
+}
+
+.level-2 {
+  padding-left: $padding-level * 3;
+  background-color: lighten($color-container, 20%);
+}
+
+.level-3 {
+  padding-left: $padding-level * 4;
+  background-color: lighten($color-container, 30%);
+}
+
+.level-4 {
+  padding-left: $padding-level * 5;
+  background-color: lighten($color-container, 40%);
+}
+
+.active {
+  display: block;
+}
+
+.nested {
+  display: none;
+}
+
+.highlight {
+  font-style: italic;
+  background-color: $color-highlight;
+}
+
+#navigation {
+  padding: 0px;
+  list-style-type: none;
+}

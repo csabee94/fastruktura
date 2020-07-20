@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Fa struktura</title>
+    <meta name="description" content="Fa struktura">
+    <meta name="author" content="Csaba Szy">
+
+    <link rel="stylesheet" href="dist/style.css">
+
+  </head>
+
+  <body>
+
+    
+    <main class="main">
+      <section class="container">
+        <div class="container__navigation">
+          <ul id="navigation"></ul>
+        </div>
+        <div class="container__content">
+          <iframe id="conent" width="100%" height="100%">
+          </iframe>
+        </div>
+        <div class="container__searchbox">
+          <input type="text" id="searchbox" placeholder="Search for contents.." title="Type in a word">
+        </div>
+        <div class="container__editbox">
+          <input type="text" id="editbox" placeholder="Rename last clicked folder" title="Type in a word">
+          <button id="edit">Edit</button>
+        </div>
+      </section>
+    </main>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="dist/app.js"></script>
+    <script src="dist/events.js"></script>
+  </body>
+</html>
